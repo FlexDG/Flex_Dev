@@ -27,11 +27,14 @@ const cursorinner = document.querySelector('.cursor2');
 const a = document.querySelectorAll('a');
 
 function updateCursorPos(e) {
-    const x = e.clientX;
-    const y = e.clientY;
-    cursor.style.transform = `translate3d(calc(${x}px - 50%), calc(${y}px - 50%), 0)`;
-    cursorinner.style.left = x + 'px';
-    cursorinner.style.top = y + 'px';
+  const x = e.clientX;
+  const y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${x}px - 50%), calc(${y}px - 50%), 0)`;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+
+  localStorage.setItem('cursorX', x);
+  localStorage.setItem('cursorY', y);
 }
 
 document.addEventListener('mousemove', updateCursorPos);
@@ -47,31 +50,31 @@ if (isMobileDevice()) {
 
 
 document.addEventListener('mousedown', function () {
-    cursor.classList.add('click');
-    cursorinner.classList.add('cursorinnerhover');
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover');
 });
 
 document.addEventListener('mouseup', function () {
-    cursor.classList.remove('click');
-    cursorinner.classList.remove('cursorinnerhover');
+  cursor.classList.remove('click');
+  cursorinner.classList.remove('cursorinnerhover');
 });
 
 a.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        cursor.classList.add('hover');
-    });
-    item.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
-    });
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
 });
 
 
 function showCursor() {
   const cursor = document.querySelector('.cursor');
-  cursor.style.opacity = 1; 
+  cursor.style.opacity = 1;
 }
 
 function showCursor2() {
   const cursor = document.querySelector('.cursor2');
-  cursor.style.opacity = 1; 
+  cursor.style.opacity = 1;
 }

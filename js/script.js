@@ -26,7 +26,7 @@
     var storedY = localStorage.getItem('cursorY');
     
     if (storedX && storedY) {
-        cursor.style.transform = `translate3d(calc(${storedX}px - 50%), calc(${storedY}px - 50%), 0)`
+        cursor.style.transform = `translate3d(calc(${storedX}px - 50%), calc(${storedY}px - 50%), 0)`;
     }
     
     document.addEventListener('mousemove', function (e) {
