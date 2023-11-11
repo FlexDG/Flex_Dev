@@ -1247,13 +1247,11 @@ span {
 
 .header-sci {
     position: absolute;
-    right: 0;
+    right: -25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    bottom: 38%;
+    bottom: 340px;
     flex-direction: column;
 }
 
@@ -3623,7 +3621,6 @@ span {
 
     .home-text-container {
         margin-top: 100px;
-
     }
 }
 
@@ -3767,9 +3764,6 @@ span {
     }
 
     @media(max-width:405px) {
-        .home-text-container {
-            top: 100px;
-        }
 
         .about-img-box img {
             height: 340px;
@@ -3834,7 +3828,7 @@ span {
 
     @media(max-width:359px) {
         .home-text-container {
-            top: 150px;
+            top: 80px;
         }
 
         .about-img-box img {
