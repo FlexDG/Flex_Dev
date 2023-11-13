@@ -2,6 +2,7 @@
 
     document.cookie = "myCookie=myValue; SameSite=None; Secure";
 
+
     window.addEventListener("load", () => {
         document.querySelector(".main").classList.remove("hidden");
         

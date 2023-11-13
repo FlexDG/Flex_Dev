@@ -113,7 +113,6 @@ body {
 .hover {
     background-color: rgba(0, 195, 255, 0.786);
     opacity: 0.5;
-
 }
 
 .cursorinnerhover {
@@ -2844,11 +2843,11 @@ span {
     background-color: #ffffffae;
     bottom: 0;
     left: 0;
-    transition: width 0.5s ease; 
+    transition: width 0.5s ease;
 }
 
 .pp-title-center h3:hover::before {
-    width: 101%;  
+    width: 101%;
 }
 
 .pp-body i {
@@ -3211,7 +3210,8 @@ span {
     .details span {
         font-size: 3.3dvw;
     }
-    .process-section-title h3{
+
+    .process-section-title h3 {
         line-height: 1.8em;
         font-size: 3.5dvw;
     }
@@ -3274,6 +3274,7 @@ span {
     .home-text h1 {
         font-size: 3.5vw;
     }
+
     .portfolio-item-2 {
         width: 98%;
     }
@@ -3357,8 +3358,8 @@ span {
 
     .home-text-container {
         position: relative;
-        bottom: -4.2em;
-        width: 110%;
+        bottom: -4.8em;
+        width: 115%;
         transform: translate(-50%, -50%);
         left: 50%;
     }
@@ -3441,12 +3442,13 @@ span {
         left: 0;
         flex-direction: row;
         z-index: 1000;
-        margin-top: -80px;
+        margin-top: -100px;
     }
 
     .header-sci li {
-        margin: 0 20px 0 0;
+        margin: 0 10px 100px 0;
     }
+
     .card-holder .social-links a {
         width: 30px;
         height: 30px;
@@ -3454,9 +3456,9 @@ span {
     }
 
     .header-sci li a {
-        width: 30px;
-        height: 30px;
-        font-size: 13px;
+        width: 27px;
+        height: 27px;
+        font-size: 11px;
     }
 }
 
@@ -3640,9 +3642,6 @@ span {
         width: 93.5dvw;
     }
 
-    .header-sci li {
-        margin: 0 20px 100px 0;
-    }
 
     @media(max-width:726px) {
         .services-section-title-2 h2 {
@@ -3774,20 +3773,24 @@ span {
         }
 
         .home-text h1,
-        .home-text h2,
         .home-text span,
-        .home-text p {
-            font-size: 15px;
+        .home-text h2 {
+            font-size: 3.5dvw;
+        }
+
+        .home-text-container {
+            bottom: -1.5em;
         }
 
         .header-sci li a {
-            width: 25px;
-            height: 25px;
-            font-size: 10px;
+            width: 20px;
+            height: 20px;
+            font-size: 8px;
+            margin-top: -1em;
         }
 
         .header-sci li {
-            margin: 0 20px 80px 0;
+            margin: 0 10px 100px 0;
         }
 
     }
@@ -3828,7 +3831,7 @@ span {
 
     @media(max-width:359px) {
         .home-text-container {
-            top: 80px;
+            top: 40px;
         }
 
         .about-img-box img {
@@ -3912,7 +3915,6 @@ span {
         .home-text-container {
             margin-top: 7em;
             position: relative;
-            width: 130%;
             transform: translate(-50%, -50%);
             left: 50%;
         }
@@ -3922,13 +3924,13 @@ span {
         }
 
         .home-text p {
-            font-size: 11px;
+            font-size: 2.5dvw;
         }
 
         .btn,
         .submit-btn {
-            padding: 8px 8px 8px 8px;
-            font-size: 9px;
+            padding: 7px 7px 7px 7px;
+            font-size: 2dvw;
         }
 
         .services-card {
@@ -3955,7 +3957,7 @@ span {
             font-size: 27px;
         }
 
-        .services-section-title h3{
+        .services-section-title h3 {
             font-size: 16px;
         }
 

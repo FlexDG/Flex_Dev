@@ -826,7 +826,7 @@ section {
     width: 80px;
     height: 40px;
     margin: 0 -15px;
-    left: -3.5%;
+    left: -4.2%;
   }
 
   .container-intro .intro-glass i {
@@ -856,5 +856,12 @@ section {
 
   .container-intro .hover-content::before {
     height: 4.5%;
+  }
+}
+
+@media  (max-width: 325px) {
+  .container-intro .intro-glass {
+    width: 75px;
+    height: 35px;
   }
 }
