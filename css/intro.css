@@ -49,6 +49,11 @@ body {
   transition: opacity 0.5s;
 }
 
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -415,6 +420,7 @@ img {
 
 .container-intro .intro-glass {
   position: relative;
+  cursor: pointer;
   width: 230px;
   height: 240px;
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);

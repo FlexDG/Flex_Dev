@@ -24,7 +24,7 @@ gsap.fromTo(
 
 const cursor = document.querySelector('.cursor');
 const cursorinner = document.querySelector('.cursor2');
-const a = document.querySelectorAll('a');
+const a = document.querySelectorAll('a, .intro-glass');
 
 function updateCursorPos(e) {
   const x = e.clientX;

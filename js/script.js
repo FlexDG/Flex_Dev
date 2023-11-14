@@ -5,16 +5,24 @@
 
     window.addEventListener("load", () => {
         document.querySelector(".main").classList.remove("hidden");
-        
-        document.querySelector(".home-section").classList.add("active"); 
-        
+    
+        const hash = window.location.hash;
+    
+        if (hash) {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                targetSection.classList.add("active");
+            }
+        } else {
+            document.querySelector(".home-section").classList.add("active");
+        }
+    
         /**********Page Loader***********/
-
+    
         document.querySelector(".page-loader").classList.add("fade-out");
         setTimeout(() => {
             document.querySelector(".page-loader").style.display = "none";
         }, 800);
-
     });
 
     /**********Custom Cursor***********/
