@@ -460,15 +460,15 @@ img {
 }
 
 .container-intro .hover-content h1 {
-  color: #ffffff;
+  color: #ffffffdf;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
-  font-size: 4.5em;
+  font-size: 4.8em;
   line-height: 1em;
   letter-spacing: 4px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 100;
   display: flex;
   width: 100%;
   font-weight: 0;
@@ -493,11 +493,37 @@ img {
   z-index: -100;
 }
 
+.container-intro .hover-content span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 5.3rem;
+  text-shadow: 0 10px 20px rgba(246, 246, 246, 0.208);
+  margin-left: 20px;
+}
+
+.container-intro .hover-content span:before {
+  content: attr(data-text);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+  line-height: 0.85em;
+  background: linear-gradient(0deg, #fff 0, transparent 90%);
+  -webkit-background-clip: text;
+  z-index: -100;
+  background-clip: text;
+  pointer-events: none;
+  color: transparent;
+  opacity: 0.2;
+}
+
 .container-intro .hover-content {
   position: absolute;
   justify-content: center;
   display: flex;
   align-items: center;
+  width: 1500px;
   display: flex;
   opacity: 0;
   transition: 0.5s;
@@ -508,8 +534,10 @@ img {
 .container-intro:hover .hover-content {
   transition-delay: 0.5s;
   opacity: 1;
+  width: 150%;
   margin-top: -150px;
   justify-content: center;
+  width: 1500px;
   display: flex;
   align-items: center;
   visibility: visible;
@@ -555,7 +583,7 @@ img {
 .container-intro:hover .blob-2 {
   position: absolute;
   top: 30;
-  left: -50px;
+  left: 250px;
   width: 300px;
   height: 300px;
   animation: blobZoom 8s linear infinite;
@@ -565,7 +593,7 @@ img {
 .container-intro .blob-2 {
   position: absolute;
   top: 30;
-  left: -50px;
+  left: 250px;
   width: 300px;
   height: 300px;
   z-index: 0;
@@ -600,6 +628,10 @@ img {
   .container-intro .hover-content h1 {
     font-size: 3.8rem;
     line-height: 1em;
+  }
+
+  .container-intro .hover-content span {
+    font-size: 4.2rem;
   }
 
   .container-intro .intro-glass {
@@ -642,6 +674,11 @@ img {
   .container-intro .hover-content h1 {
     font-size: 2.8rem;
     margin-top: 100px;
+  }
+
+  .container-intro .hover-content span {
+    font-size: 3.2rem;
+    margin-left: 15px;
   }
 
   .container-intro .intro-glass i {
@@ -688,6 +725,9 @@ img {
     margin-top: 200px;
   }
 
+  .container-intro .hover-content span {
+    font-size: 2.2rem;
+  }
 
 }
 
@@ -711,7 +751,10 @@ img {
     font-size: 1.3rem;
     margin-top: 200px;
   }
-
+  .container-intro .hover-content span {
+    font-size: 1.7rem;
+    margin-left: 10px;
+  }
 }
 
 
@@ -734,6 +777,10 @@ img {
   .container-intro .hover-content h1 {
     font-size: 1rem;
     margin-top: 250px;
+  }
+
+  .container-intro .hover-content span {
+    font-size: 1.4rem;
   }
 }
 
