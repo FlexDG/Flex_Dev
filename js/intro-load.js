@@ -69,6 +69,8 @@ a.forEach(item => {
 });
 
 
+
+
 function showCursor() {
   const cursor = document.querySelector('.cursor');
   cursor.style.opacity = 1;

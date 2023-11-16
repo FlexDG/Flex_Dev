@@ -49,9 +49,9 @@ body {
   transition: opacity 0.5s;
 }
 
-a{
+a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
 
 .center {
@@ -387,38 +387,16 @@ img {
   display: none !important;
 }
 
-.hover-text {
-  position: absolute;
-  top: 200px;
-  z-index: 200;
-  transform: translateY(-50%);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.container-intro:hover .hover-text {
-  opacity: 1;
-  z-index: 2;
-  color: #fff;
-}
-
-.container-intro:hover .hover-text a {
-  opacity: 1;
-  z-index: 2;
-  color: #fff;
-}
-
 .container-intro {
   position: relative;
-  width: 1250px;
+  width: 1200px;
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
 }
 
-.container-intro .intro-glass {
+ .container-intro .intro-glass {
   position: relative;
   cursor: pointer;
   width: 230px;
@@ -438,11 +416,22 @@ img {
   border-radius: 10px;
   margin: 0 -45px;
   transform: rotate(calc(var(--r) * 1deg));
+
+}
+
+.container-intro .intro-glass:hover{
+  background-color: rgba(93, 203, 247, 0.235);
+}
+
+.container-intro .intro-glass:hover i{
+  color: #fff;
 }
 
 .container-intro .intro-glass i {
+  color: #ffffffd1;
   font-size: 4em;
   margin-bottom: 20px;
+  transition: 0.5s; 
 }
 
 .container-intro:hover .intro-glass {
@@ -451,7 +440,7 @@ img {
   margin: 350px 0 0 20px;
 }
 
-.container-intro .intro-glass::before {
+ .intro-glass::before {
   content: attr(data-text);
   position: absolute;
   bottom: 0;
@@ -464,59 +453,22 @@ img {
   color: #fff;
 }
 
-.container-intro .hover-content {
-  position: absolute;
-  justify-content: center;
+
+.hover-text-container{
   display: flex;
-  align-items: center;
-  display: flex;
-  opacity: 0;
-  transition: 0.5s;
-  margin-top: -900px;
-  visibility: hidden;
-}
-
-.container-intro:hover .hover-content {
-  transition-delay: 0.5s;
-  opacity: 1;
-  margin-top: -150px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  visibility: visible;
-}
-
-.container-intro .hover-content::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 50%;
-  width: 0%;
-  background-color: var(--white-alpha-25);
-  z-index: -1;
-  transition: width 0.3s ease;
-}
-
-.container-intro .hover-content:hover:before {
-  width: 101%;
-}
-
-.container-intro .hover-content:hover span {
-  color: var(--nav-blue);
-  transition: 0.5s;
+  flex-direction: row;
 }
 
 .container-intro .hover-content h1 {
-  color: #bebebe;
+  color: #ffffff;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 4.5em;
   line-height: 1em;
   letter-spacing: 4px;
   text-align: center;
-  font-weight: 100;
+  font-weight: 700;
   display: flex;
   width: 100%;
   font-weight: 0;
@@ -541,39 +493,28 @@ img {
   z-index: -100;
 }
 
-.container-intro .hover-content span {
-  color: #fff;
-  font-weight: 700;
-  font-size: 4.5rem;
-  text-shadow: 0 10px 20px rgba(246, 246, 246, 0.208);
-}
-
-.container-intro .hover-content span:before {
-  content: attr(data-text);
+.container-intro .hover-content {
   position: absolute;
-  right: 0;
-  top: 0;
-  transform-origin: bottom;
-  transform: rotateX(180deg);
-  line-height: 0.85em;
-  background: linear-gradient(0deg, #fff 0, transparent 90%);
-  -webkit-background-clip: text;
-  z-index: -100;
-  background-clip: text;
-  pointer-events: none;
-  color: transparent;
-  opacity: 0.2;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  transition: 0.5s;
+  margin-top: -900px;
+  visibility: hidden;
 }
 
-.container-intro .hover-content a {
-  color: #ebebeb;
-  text-decoration: none;
-  user-select: none;
+.container-intro:hover .hover-content {
+  transition-delay: 0.5s;
+  opacity: 1;
+  margin-top: -150px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  visibility: visible;
 }
 
-section {
-  animation: transitionIn 0.75s;
-}
 
 .sec-center {
   position: absolute;
@@ -585,18 +526,6 @@ section {
   display: flex;
 }
 
-.sample-container {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.sample-container h1 {
-  cursor: auto;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
 
 @keyframes transitionIn {
 
@@ -623,8 +552,7 @@ section {
   transition: opacity 2s ease-in-out;
 }
 
-
-.container-intro:hover .blob {
+.container-intro:hover .blob-2 {
   position: absolute;
   top: 30;
   left: -50px;
@@ -634,7 +562,7 @@ section {
   z-index: 0;
 }
 
-.container-intro .blob {
+.container-intro .blob-2 {
   position: absolute;
   top: 30;
   left: -50px;
@@ -643,6 +571,23 @@ section {
   z-index: 0;
 }
 
+.container-intro .block {
+  position: absolute;
+  left: -300px;
+  width: 1500px;
+  opacity: 0;
+  height: 300px;
+}
+
+.container-intro:hover .block {
+  position: absolute;
+  left: -300px;
+  width: 1500px;
+  opacity: 0;
+  height: 300px;
+}
+
+
 @media screen and (max-width: 1285px) {
 
   .container-intro {
@@ -650,28 +595,16 @@ section {
     height: 100%;
     width: 98%;
     margin-right: -200px;
+  }
 
+  .container-intro .hover-content h1 {
+    font-size: 3.8rem;
+    line-height: 1em;
   }
 
   .container-intro .intro-glass {
     height: 200px;
-  }
-
-  .container-intro .hover-content h1 {
-    font-size: 2.8rem;
-    line-height: 1.2em;
-  }
-
-  .container-intro .hover-content h1:before {
-    line-height: 1.2em;
-  }
-
-  .container-intro .hover-content span {
-    font-size: 3.6rem;
-  }
-
-  .hover-content a {
-    font-size: 2.8rem;
+    width: 180px;
   }
 
   .container-intro .intro-glass i {
@@ -682,15 +615,14 @@ section {
     margin-top: 20px;
   }
 
-  .container-intro .blob {
+  .container-intro .blob-2 {
     display: none;
   }
-
 }
 
 @media (max-width: 1052px) {
   .container-intro .intro-glass {
-    width: 210px;
+    width: 175px;
     height: 190px;
   }
 
@@ -702,9 +634,14 @@ section {
 
 @media (max-width: 991px) {
   .container-intro .intro-glass {
-    width: 170px;
+    width: 135px;
     height: 140px;
     left: -1%;
+  }
+
+  .container-intro .hover-content h1 {
+    font-size: 2.8rem;
+    margin-top: 100px;
   }
 
   .container-intro .intro-glass i {
@@ -715,47 +652,27 @@ section {
     display: none;
   }
 
-  .container-intro .hover-content h1 {
-    font-size: 2.3rem;
-    margin-top: 10px;
-  }
-
-  .container-intro .hover-content h1:before {
-    line-height: 1.2em;
-  }
-
-  .container-intro .hover-content span {
-    font-size: 3rem;
-  }
-
-  .hover-content a {
-    font-size: 2.3rem;
-  }
-
-  .container-intro .hover-content::before {
-    height: 10%;
-  }
-
 }
 
 @media screen and (max-width: 797px) {
   .container-intro .intro-glass {
-    width: 150px;
+    width: 105px;
     height: 120px;
-    left: 0.5%;
+    left: -6%;
   }
 
   .container-intro .hover-content h1 {
-    margin-top: 50px;
+    font-size: 2.1rem;
+    margin-top: 200px;
   }
 }
 
 @media  (max-width: 672px) {
   .container-intro .intro-glass {
-    width: 95px;
+    width: 60px;
     height: 65px;
     margin: 0 -15px;
-    left: -3.4%;
+    left: -17.4%;
   }
 
   .container-intro .intro-glass i {
@@ -767,33 +684,19 @@ section {
   }
 
   .container-intro .hover-content h1 {
-    font-size: 1.5rem;
-    margin-top: 100px;
+    font-size: 1.8rem;
+    margin-top: 200px;
   }
 
-  .container-intro .hover-content h1:before {
-    line-height: 1.2em;
-  }
 
-  .container-intro .hover-content span {
-    font-size: 2rem;
-  }
-
-  .hover-content a {
-    font-size: 1.5rem;
-  }
-
-  .container-intro .hover-content::before {
-    height: 4.5%;
-  }
 }
 
 @media  (max-width: 405px) {
   .container-intro .intro-glass {
-    width: 85px;
+    width: 45px;
     height: 50px;
     margin: 0 -15px;
-    left: -3.5%;
+    left: -15%;
   }
 
   .container-intro .intro-glass i {
@@ -805,34 +708,19 @@ section {
   }
 
   .container-intro .hover-content h1 {
-    font-size: 1rem;
-    margin-top: 150px;
+    font-size: 1.3rem;
+    margin-top: 200px;
   }
 
-  .container-intro .hover-content h1:before {
-    line-height: 1em;
-  }
-
-  .container-intro .hover-content span {
-    font-size: 1.5rem;
-  }
-
-  .hover-content a {
-    font-size: 1rem;
-  }
-
-  .container-intro .hover-content::before {
-    height: 4.5%;
-  }
 }
 
 
 @media  (max-width: 347px) {
   .container-intro .intro-glass {
-    width: 80px;
+    width: 35px;
     height: 40px;
     margin: 0 -15px;
-    left: -4.2%;
+    left: -18.2%;
   }
 
   .container-intro .intro-glass i {
@@ -845,29 +733,14 @@ section {
 
   .container-intro .hover-content h1 {
     font-size: 1rem;
-    margin-top: 150px;
-  }
-
-  .container-intro .hover-content h1:before {
-    line-height: 1em;
-  }
-
-  .container-intro .hover-content span {
-    font-size: 1.5rem;
-  }
-
-  .hover-content a {
-    font-size: 1rem;
-  }
-
-  .container-intro .hover-content::before {
-    height: 4.5%;
+    margin-top: 250px;
   }
 }
 
 @media  (max-width: 325px) {
-  .container-intro .intro-glass {
-    width: 75px;
-    height: 35px;
+  .container-intro .intro-glass{
+    width: 35px;
+    height: 40px;
+    left: -18%;
   }
 }
