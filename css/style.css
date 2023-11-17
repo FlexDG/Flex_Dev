@@ -70,6 +70,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     padding: 35px 15px;
     transition: opacity 0.5s;
+    padding-top: -600px;
 }
 
 .text-gradient {
@@ -3632,7 +3633,6 @@ span {
     .contact-info {
         width: 100%;
     }
-
     .top-row {
         width: 93.5dvw;
     }
@@ -3836,7 +3836,6 @@ span {
         .about-img-box img {
             height: 240px;
         }
-
     }
 
     @media(max-width:525px) {
@@ -3902,7 +3901,6 @@ span {
             margin-left: 5px;
         }
 
-        .section-title h2,
         .header .nav-inner ul li a {
             font-size: 35px;
         }
@@ -3953,7 +3951,7 @@ span {
         .services-section-title h2,
         .process-section-title h2,
         .section-title h2 {
-            font-size: 27px;
+            font-size: 7dvw;
         }
 
         .services-section-title h3 {

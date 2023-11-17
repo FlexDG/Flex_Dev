@@ -16,6 +16,7 @@
         } else {
             document.querySelector(".home-section").classList.add("active");
         }
+        
     
         /**********Page Loader***********/
     
@@ -146,7 +147,7 @@
 
                 /**********Gsap Services Section Animations***********/
 
-                const servicesElements = document.querySelectorAll(".services-section-title, .my-services-box, .container-cards, .services-card-container");
+                const servicesElements = document.querySelectorAll(".services-section-title, .services-card-container");
 
                 servicesElements.forEach((element, index) => {
                     gsap.from(element, {
@@ -402,6 +403,34 @@
     TweenMax.from(".glass-ball", 1, {
         opacity: 0,
         delay: 1,
+        x: 20,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".section-title, .services-section-title, .contact-section-title, .portfolio-section-title", 1, {
+        opacity: 0,
+        delay: 0.5,
+        y: -50,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".services-card-container", 1, {
+        opacity: 0,
+        delay: 1,
+        y: 50,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".about-left, .contact-form", 1, {
+        opacity: 0,
+        delay: 1,
+        x: -20,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".about-text, .card-credit, .portfolio-column", 1, {
+        opacity: 0,
+        delay: 1.4,
         x: 20,
         ease: Expo.easeInOut
     })
