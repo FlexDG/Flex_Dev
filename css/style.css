@@ -2002,7 +2002,7 @@ span {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    top: 96%;
+    top: 100%;
 }
 
 #cards7:hover>.services-card:after {
@@ -3637,7 +3637,6 @@ span {
         width: 93.5dvw;
     }
 
-
     .bottom-row {
         width: 93.5dvw;
     }
@@ -3938,11 +3937,11 @@ span {
         }
 
         .card-content h2 {
-            font-size: 8vw;
+            font-size: 6vw;
         }
 
         .card-content h4 {
-            font-size: 4vw;
+            font-size: 3.5vw;
         }
 
         .card-content p {
@@ -3990,9 +3989,7 @@ span {
             margin-bottom: -1px;
         }
 
-        .services-btn-container {
-            margin-top: 90px;
-        }
+
 
     }
 
