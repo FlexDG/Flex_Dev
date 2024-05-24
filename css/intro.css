@@ -97,6 +97,10 @@ a {
   opacity: 0;
 }
 
+.cursor, .cursor2 {
+  transition: transform 0.1s ease, left 0.3s ease, top 0.3s ease;
+}
+
 .cursor2 {
   width: 20px;
   opacity: 0;

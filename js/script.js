@@ -17,7 +17,8 @@
             document.querySelector(".home-section").classList.add("active");
         }
         
-    
+
+        
         /**********Page Loader***********/
     
         document.querySelector(".page-loader").classList.add("fade-out");
@@ -74,6 +75,27 @@
         cursor.style.display = "none";
         cursorinner.style.display = "none";
     }
+
+    const scrollButton = document.querySelector(".scroll-top");
+
+
+function toggleScrollButton() {
+  if (window.scrollY > document.querySelector("header").offsetHeight) {
+    scrollButton.classList.add("active");
+  } else {
+    scrollButton.classList.remove("active");
+  }
+}
+
+
+window.addEventListener("scroll", toggleScrollButton);
+
+scrollButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", 
+  });
+});
     
     /**********Toggle Navbar***********/
 
@@ -126,9 +148,9 @@
                     gsap.from(element, {
                         ...gsapConfig,
                         delay: index * 0.3 + 0.6,
-                        x: element.classList.contains("bg-pictures") ? 1 : (element.classList.contains("circle-container") ? 1 : 0),
+                        x: element.classList.contains("glass-ball") ? 20 : (element.classList.contains("circle-container") ? 1 : 0),
                         y: element.classList.contains("home-text") ? 50 : (element.classList.contains("header-sci") ? -800 : 0),
-                        x: element.classList.contains("glass-ball") ? 20 : 0,
+                        x: element.classList.contains("bg-pictures") ? 2 : 0,
                     });
                 });
 
@@ -211,7 +233,7 @@
     /**********Header Multi-Text***********/
 
     const typed = new Typed('.multiple-text', {
-        strings: ['Frontend Developer', 'Web Developer', 'UI/UX Designer', 'Video Editor', 'Photo Editor'],
+        strings: ['UI/UX Designer', 'Frontend Developer', 'Web Developer', 'Video Editor', 'Photo Editor'],
         typeSpeed: 100,
         backSpeed: 100,
         bacKDelay: 1000,
@@ -356,27 +378,13 @@
     });
 
 
-
-    TweenMax.from(".phone", 1, {
+    TweenMax.from(".bg-pictures", 1, {
         opacity: 0,
-        delay: 1,
+        delay: 1.5,
         y: 1,
         ease: Expo.easeInOut
     })
 
-    TweenMax.from(".lappy", 1, {
-        opacity: 0,
-        delay: 1,
-        y: 1,
-        ease: Expo.easeInOut
-    })
-
-    TweenMax.from(".tea", 1, {
-        opacity: 0,
-        delay: 1,
-        y: -1,
-        ease: Expo.easeInOut
-    })
 
     TweenMax.from(".home-text", 1, {
         opacity: 0,
