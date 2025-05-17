@@ -1937,8 +1937,7 @@ span {
     position: relative;
     width: 75px;
     display: flex;
-    margin-top: 7px;
-    height: 62px;
+    height: 75px;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
@@ -2983,7 +2982,7 @@ span {
 }
 
 .pp-body span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 10px 20px rgba(246, 246, 246, 0.208);
@@ -3586,7 +3585,10 @@ span {
 
 @media(max-width:1290px) {
     .section-title h2 {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+    }
+    .container-left br {
+        display: none;
     }
 
     .home-text-container {
