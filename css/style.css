@@ -1760,33 +1760,38 @@ span {
 }
 
 .tech-stack-container {
-    width: 1150px;
+    width: 100%;
     margin-top: -40px;
-    padding: 0;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 60px;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1500px) {
+    .tech-stack-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 .top-row {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1150px;
+    display: none;
 }
 
 .bottom-row {
-    margin-top: -60px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1150px;
+    display: none;
 }
 
 .tech-stack-card {
     position: relative;
-    width: 170px;
-    margin: 20px 5px 50px 10px;
+    width: 100%;
+    max-width: 170px;
+    margin: 0;
     height: 150px;
     border-radius: 20px;
     display: flex;
@@ -3293,6 +3298,13 @@ span {
         display: none;
     }
 
+     .about-btn-container {
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .home-section,
     .about-section {
         overflow: hidden;
@@ -3515,7 +3527,7 @@ span {
     .btn,
     .submit-btn {
         padding: 10px 10px 10px 10px;
-        font-size: 12px;
+        font-size: 16px;
     }
 
 
@@ -3628,6 +3640,14 @@ span {
 
     .tech-stack-container {
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+        margin-bottom: 50px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -3657,39 +3677,28 @@ span {
 
     .tech-stack-container {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .tech-stack-container {
-        margin-left: 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+        margin-bottom: 50px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .tech-stack-card {
-        width: 45%;
-        margin: 10px;
-        max-width: 170px;
+        width: 100%;
+        margin: 0;
+        max-width: 150px;
     }
 
     .top-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: none;
     }
 
     .bottom-row {
-        margin-top: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .about-btn-container {
-        margin-top: 30px;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
 
     .about-text {
@@ -3740,12 +3749,17 @@ span {
     .contact-info {
         width: 100%;
     }
-    .top-row {
-        width: 93.5dvw;
-    }
 
-    .bottom-row {
-        width: 93.5dvw;
+    .tech-stack-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 10px;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
 /* 
     @media(max-width:791px) {
@@ -3868,6 +3882,15 @@ span {
             background: var(--clr);
         }
 
+        .tech-stack-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .accordion-wrapper h1 {
             font-size: 18px;
         }
@@ -3957,7 +3980,7 @@ span {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 150%;
+            width: 100%;
         }
     }
 
@@ -4059,8 +4082,8 @@ span {
 
         .btn,
         .submit-btn {
-            padding: 7px 7px 7px 7px;
-            font-size: 2dvw;
+            padding: 10px 10px 10px 10px;
+            font-size: 3.5dvw;
         }
 
         .services-card {
